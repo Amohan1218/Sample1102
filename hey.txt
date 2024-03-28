@@ -1,0 +1,9 @@
+select * from secUsers where usrId in (
+select usrid from secUserOperations where oprid in(
+select oprid from secOperations where oprid in(
+select oprid from secOperationRoles where roleid in(
+select roleid from secRoles where roleid in(
+select roleid from secRoleGroups where grpid in(
+select grpid from secGroups where grpid in(
+select grpid from secGroupRights where rightId in( 
+select rightid from secRights where rightname in('button_ReinstateFinanceList_NewReinstateFinance')))))))));
